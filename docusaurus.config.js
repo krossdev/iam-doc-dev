@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const config = {
   title: 'Kross IAM',
-  tagline: 'Unified Identity and Access management server',
+  tagline: '统一身份管理和访问控制服务器',
   url: 'https://iam.kross.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -14,6 +14,10 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'krossdev',
   projectName: 'https://github.com/krossdev/iam-docs.git',
+  i18n: {
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
+  },
 
   presets: [
     [
@@ -36,66 +40,67 @@ const config = {
 
   themeConfig:
     ({
+      image: 'img/logo.png',
+      hideableSidebar: true,
+      announcementBar:
+      {
+        id: 'announcement-2',
+        content: 'If you like Kross IAM, give it a star ⭐ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/krossdev/iam">GitHub</a>!',
+      },
       navbar: {
         title: 'Kross IAM',
         logo: {
           alt: 'Kross IAM Logo',
-          src: 'img/logo192.png',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '指南',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: '博客', position: 'left'},
           {
-            href: 'https://github.com/krossdev/kam',
-            label: 'GitHub',
+            href: 'https://github.com/krossdev/iam',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
             position: 'right',
           },
         ],
       },
       footer: {
         style: 'dark',
+        logo: {
+          src: 'img/banner.png',
+          alt: 'Kross IAM Logo',
+          href: 'https://github.com/krossdev/iam',
+        },
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
+                label: '指南',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/krossiam',
               },
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
-                label: 'Blog',
+                label: '博客',
                 to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/krossdev/iam',
               },
             ],
           },
