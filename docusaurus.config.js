@@ -5,8 +5,8 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const config = {
-  title: 'Kross IAM',
-  tagline: '统一身份管理和访问控制服务器',
+  title: 'KrossIAM',
+  tagline: '统一身份管理与访问规则编排系统',
   url: 'https://iam.kross.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -30,6 +30,12 @@ const config = {
         blog: {
           showReadingTime: true,
           editUrl: 'https://github.com/krossdev/iam-docs/edit/main/blog/',
+          blogSidebarTitle: '全部文章',
+          blogSidebarCount: 'ALL',
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Kross IAM Project.`,
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

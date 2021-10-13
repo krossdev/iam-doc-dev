@@ -26,14 +26,14 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="统一身份管理及访问控制服务器">
+      description="统一身份管理及访问规则编排服务器">
       <HomepageHeader />
       <main className={styles.main}>
         <div class="row">
           <div class="col col--7">
             <h3>介绍</h3>
             <p>
-              Kross IAM 是以安全作为优先设计的身份管理和访问控制系统，实现了大多数系统都需要，
+              KrossIAM 是以安全作为优先设计的身份管理和访问规则编排系统，实现了大多数系统都需要，
               但却不太容易正确处理的核心部分--身份管理（或账户管理），
               包括账户注册、登录、存储，密码找回，第三方社交账号登录，多因素认证，等等...
             </p>
@@ -41,12 +41,13 @@ export default function Home() {
             </p>
             <h3>特征</h3>
             <ul>
-              <li>基于 OPA 的授权规则配置系统；</li>
+              <li>基于 OPA 的规则编排系统，精细的授权模式；</li>
               <li>支持 Sqlite、PostgreSQL、MySQL、CockroachDB 数据库；</li>
               <li>支持多 Realm，各 Realm 间使用数据库 schema 实现数据隔离；</li>
             </ul>
           </div>
           <div class="col col--5">
+            <h3>文章</h3>
             <h3>资源</h3>
             <ul>
               <li>
