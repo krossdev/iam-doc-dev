@@ -2,11 +2,11 @@
 slug: authentication
 title: 身份验证备忘录
 authors: krossdev
-tags: [authentication, cheat, sheet]
+tags: [authentication, cheat sheet]
 ---
 
-:::note
-这是一篇译文，原文地址：
+:::note 注意
+这是一篇译文，仅供参考，原文地址：
 https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
 :::
 
