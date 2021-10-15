@@ -21,7 +21,9 @@ Web 应用环境中的身份验证通常通过提交用户名或 ID 以及只有
 [会话管理备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)
 包含有关该领域最佳实践的进一步指导。
 
-## 身份验证通用指南
+<!-- truncate -->
+
+ ## 身份验证通用指南
 
 ### 用户 ID
 

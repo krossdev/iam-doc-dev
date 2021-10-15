@@ -34,7 +34,7 @@ const config = {
           blogSidebarCount: 'ALL',
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} Kross IAM Project.`,
+            copyright: `Copyright © ${new Date().getFullYear()} KrossIAM Project.`,
           },
         },
         theme: {
@@ -51,12 +51,12 @@ const config = {
       announcementBar:
       {
         id: 'announcement-2',
-        content: 'If you like Kross IAM, give it a star ⭐ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/krossdev/iam">GitHub</a>!',
+        content: 'If you like KrossIAM, give it a star ⭐ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/krossdev/iam">GitHub</a>!',
       },
       navbar: {
-        title: 'Kross IAM',
+        title: 'KrossIAM',
         logo: {
-          alt: 'Kross IAM Logo',
+          alt: 'KrossIAM Logo',
           src: 'img/logo.png',
         },
         items: [
@@ -79,7 +79,7 @@ const config = {
         style: 'dark',
         logo: {
           src: 'img/banner.png',
-          alt: 'Kross IAM Logo',
+          alt: 'KrossIAM Logo',
           href: 'https://github.com/krossdev/iam',
         },
         links: [
@@ -111,7 +111,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Kross IAM Project, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} KrossIAM Project, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
