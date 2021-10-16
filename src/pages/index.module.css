@@ -3,11 +3,16 @@
  * and scoped locally.
  */
 
-.heroBanner {
+.hero {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(to left, #7928CA, #FF0080);
+}
+
+.button {
+  color: #FF0080;
 }
 
 .container {

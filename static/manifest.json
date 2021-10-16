@@ -18,6 +18,12 @@
   "display": "standalone",
   "scope": "/",
   "theme_color": "#d7129b",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://iam.kross.work/manifest.json"
+    }
+  ],
   "shortcuts": [{
       "name": "指南",
       "description": "用户操作指南",

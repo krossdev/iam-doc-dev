@@ -30,7 +30,7 @@ const config = {
         blog: {
           showReadingTime: true,
           editUrl: 'https://github.com/krossdev/iam-docs/edit/main/blog/',
-          blogSidebarTitle: '全部文章',
+          blogSidebarTitle: '全部博客',
           blogSidebarCount: 'ALL',
           feedOptions: {
             type: 'all',
@@ -79,7 +79,6 @@ const config = {
       logo: {
         src: 'img/banner.png',
         alt: 'KrossIAM Logo',
-        href: 'https://github.com/krossdev/iam',
       },
       links: [
         {
@@ -110,7 +109,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} KrossIAM Project, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} KrossIAM Project.`,
     },
     prism: {
       theme: lightCodeTheme,
