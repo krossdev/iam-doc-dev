@@ -1,0 +1,32 @@
+{
+  "name": "KrossIAM",
+  "short_name": "KrossIAM",
+  "description": "统一身份管理与访问规则编排系统",
+  "icons": [{
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#d7129b",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#d7129b",
+  "shortcuts": [{
+      "name": "指南",
+      "description": "用户操作指南",
+      "url": "/docs?source=pwa"
+    },
+    {
+      "name": "博客",
+      "description": "访问博客",
+      "url": "/blog?source=pwa"
+    }
+  ]
+}

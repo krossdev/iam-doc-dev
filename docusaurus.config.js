@@ -44,80 +44,110 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    ({
-      image: 'img/logo.png',
-      hideableSidebar: true,
-      announcementBar:
-      {
-        id: 'announcement-2',
-        content: 'If you like KrossIAM, give it a star ⭐ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/krossdev/iam">GitHub</a>!',
+  themeConfig: ({
+    image: 'img/logo.png',
+    hideableSidebar: true,
+    announcementBar:
+    {
+      id: 'announcement-2',
+      content: 'If you like KrossIAM, give it a star ⭐ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/krossdev/iam">GitHub</a>!',
+    },
+    navbar: {
+      title: 'KrossIAM',
+      logo: {
+        alt: 'KrossIAM Logo',
+        src: 'img/logo.png',
       },
-      navbar: {
-        title: 'KrossIAM',
-        logo: {
-          alt: 'KrossIAM Logo',
-          src: 'img/logo.png',
+      items: [
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: '指南',
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: '指南',
-          },
-          {to: '/blog', label: '博客', position: 'left'},
-          {
-            href: 'https://github.com/krossdev/iam',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        logo: {
-          src: 'img/banner.png',
-          alt: 'KrossIAM Logo',
+        { to: '/blog', label: '博客', position: 'left' },
+        {
           href: 'https://github.com/krossdev/iam',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+          position: 'right',
         },
-        links: [
+      ],
+    },
+    footer: {
+      style: 'dark',
+      logo: {
+        src: 'img/banner.png',
+        alt: 'KrossIAM Logo',
+        href: 'https://github.com/krossdev/iam',
+      },
+      links: [
+        {
+          title: '文档',
+          items: [
+            {
+              label: '指南',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: '社区',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/krossiam',
+            },
+          ],
+        },
+        {
+          title: '更多',
+          items: [
+            {
+              label: '博客',
+              to: '/blog',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} KrossIAM Project, Inc.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+  }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: false,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
           {
-            title: '文档',
-            items: [
-              {
-                label: '指南',
-                to: '/docs/intro',
-              },
-            ],
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/logo.png',
           },
           {
-            title: '社区',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/krossiam',
-              },
-            ],
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json',
           },
           {
-            title: '更多',
-            items: [
-              {
-                label: '博客',
-                to: '/blog',
-              },
-            ],
+            tagName: 'meta',
+            name: 'theme-color',
+            content: '#d7129b',
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} KrossIAM Project, Inc.`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+    ],
+  ],
 };
 
 module.exports = config;

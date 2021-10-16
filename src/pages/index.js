@@ -29,8 +29,8 @@ export default function Home() {
       description="统一身份管理及访问规则编排服务器">
       <HomepageHeader />
       <main className={styles.main}>
-        <div class="row">
-          <div class="col col--7">
+        <div className="row">
+          <div className="col col--7">
             <h3>介绍</h3>
             <p>
               KrossIAM 是以安全作为优先设计的身份管理和访问规则编排系统，实现了大多数系统都需要，
@@ -46,7 +46,7 @@ export default function Home() {
               <li>支持多 Realm，各 Realm 间使用数据库 schema 实现数据隔离；</li>
             </ul>
           </div>
-          <div class="col col--5">
+          <div className="col col--5">
             <h3>文章</h3>
             <h3>资源</h3>
             <ul>
