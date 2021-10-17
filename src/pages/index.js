@@ -7,16 +7,17 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <header className={clsx('hero hero--primary', styles.hero)}>
       <div className={clsx("container", styles.container)}>
         <h1 className="hero__title">{siteConfig.tagline}</h1>
-        <p className="hero__subtitle">本地帐号管理、OIDC、OAuth、SMIL、OPA、身份认证提供</p>
+        <p className="hero__subtitle">本地帐号管理、OIDC、OAuth、SAML、OPA、身份认证提供</p>
         <div className='margin-top--xl'>
           <Link to="/docs/intro" className="button button--lg button--secondary">
             快速入门
           </Link>
-          <Link to="https://iam-demo.kross.work"
+          <Link to="/demo"
             className={clsx("button button--lg button--warning margin-left--md", styles.button)}>
             在线演示
           </Link>
@@ -28,6 +29,7 @@ function HomepageHeader() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <Layout
       title={`${siteConfig.title}`}

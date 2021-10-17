@@ -66,6 +66,7 @@ const config = {
           label: '指南',
         },
         { to: '/blog', label: '博客', position: 'left' },
+        { to: '/demo', label: '演示', position: 'left' },
         {
           href: 'https://github.com/krossdev/iam',
           className: 'header-github-link',
