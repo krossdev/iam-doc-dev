@@ -18,8 +18,7 @@ https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
 
 ## 考虑强认证
 
-一些应用程序应该使用第二个因素来检查用户是否可能执行敏感操作。有关更多信息，请参阅
-[交易授权备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Transaction_Authorization_Cheat_Sheet.html)。
+一些应用程序应该使用第二个因素来检查用户是否可能执行敏感操作。有关更多信息，请参阅[交易授权备忘录]。
 
 <!-- truncate -->
 
@@ -46,7 +45,7 @@ TLS 证书。
 
 此外，如果客户端位于执行 SSL/TLS 解密的企业代理之后，这将破坏证书验证，除非代理允许该站点。
 
-有关更多信息，请参阅：[客户端验证 TLS 握手](https://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake)
+有关更多信息，请参阅：[客户端验证 TLS 握手]
 
 ## 身份验证和错误消息
 
@@ -59,12 +58,10 @@ TLS 证书。
 
 帐户注册功能也应该纳入考虑，对于用户存在的情况，可以应用相同的通用错误消息方法。
 
-这样做的目的是防止创建[差异因素](https://cwe.mitre.org/data/definitions/204.html)，
-从而允许攻击者针对应用程序采用用户枚举操作。
+这样做的目的是防止创建[差异因素]，从而允许攻击者针对应用程序采用用户枚举操作。
 
 有趣的是，业务逻辑本身会带来与所需要处理时间相关的差异因素。的确，依赖于实现，
-处理时间可能会因为处理结果的不同（成功或失败）而明显不同（例如几秒的增量），
-这允许攻击者发起[基于时间的攻击](https://en.wikipedia.org/wiki/Timing_attack)。
+处理时间可能会因为处理结果的不同（成功或失败）而明显不同（例如几秒的增量），这允许攻击者发起[基于时间的攻击]。
 
 使用伪代码登录功能的示例：
 
@@ -103,9 +100,8 @@ ENDIF
 可以根据应用程序及其数据的重要性来决定是否返回*通用的错误消息*。
 例如，对于关键应用程序，团队可以决定在失败情况下，始终重定向到支持页面并返回通用错误消息。
 
-关于用户枚举本身，防止[暴力攻击](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#protect-against-automated-attacks)
-也是有效的，因为它们可以防止攻击者大规模应用枚举。在必须保留用户体验而无法返回通用错误消息的功能时可以使用
-[CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)。
+关于用户枚举本身，防止[暴力攻击]也是有效的，因为它们可以防止攻击者大规模应用枚举。
+在必须保留用户体验而无法返回通用错误消息的功能时可以使用[CAPTCHA]。
 
 ### 不正确和正确的响应示例
 
@@ -149,7 +145,7 @@ ENDIF
 根据身份验证尝试响应，应用程序可能会返回不同的 HTTP 错误代码。它可能会以 200 表示正确结果和 403
 表示错误。即使向用户显示通用错误页面，HTTP 响应码不同也可能会泄露有关帐户是否有效的信息。
 
-错误披露也可以用作差异因素，有关应用程序中不同错误的全局处理，请参阅[错误处理备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html)。
+错误披露也可以用作差异因素，有关应用程序中不同错误的全局处理，请参阅[错误处理备忘录]。
 
 ## 防止自动攻击
 
@@ -165,15 +161,15 @@ ENDIF
 但是在深度防御方案中实施其中一些措施时，可以达到合理的保护水平。
 
 以下部分将主要侧重于防止暴力攻击，虽然这些措施也可以有效抵御其他类型的攻击。
-有关防范凭证填充和密码喷洒的进一步指导，请参阅[凭证填充备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html)。
+有关防范凭证填充和密码喷洒的进一步指导，请参阅[凭证填充备忘录]。
 
 ### 多因素身份验证
 
 到目前为止，多因素身份验证 (MFA) 是抵御大多数与密码相关的攻击（包括蛮力攻击）的最佳防御措施，
-微软的分析表明，它可以阻止 [99.9% 的帐户泄露](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Your-Pa-word-doesn-t-matter/ba-p/731984)。
+微软的分析表明，它可以阻止 [99.9% 的帐户泄露]。
 因此，应尽可能实施；但是，根据应用程序的受众，强制使用 MFA 可能是不切实际或不可行的。
 
-[多因素身份验证备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html) 包含有关实施 MFA 的进一步指导。
+[多因素身份验证备忘录]包含有关实施 MFA 的进一步指导。
 
 ### 帐户锁定
 
@@ -205,7 +201,7 @@ ENDIF
 添加安全问题或令人难忘的单词也有助于防止自动攻击，尤其是当用户被要求从单词中输入一些随机选择的字符时。
 应该注意的是，这并**不**构成多因素身份验证，因为这两个因素是相同的（你知道的）。
 此外，安全问题通常很弱并且有可预测的答案，因此必须谨慎选择。
-[选择和使用安全问题备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html)包含这方面的进一步指导。
+[选择和使用安全问题备忘录]包含这方面的进一步指导。
 
 ## 日志记录和监控
 
@@ -268,7 +264,7 @@ OpenId 是一种基于 HTTP 的协议，它使用身份提供商来验证用户�
 （SharePoint 使用 Active Directory 联合身份验证服务 2.0）
 决定使用 SAML 2.0 身份验证作为单点登录实施的常用方法。
 
-另请参阅：[SAML 安全备忘录](https://cheatsheetseries.owasp.org/cheatsheets/SAML_Security_Cheat_Sheet.html)
+另请参阅：[SAML安全备忘录]
 
 ### FIDO
 
@@ -299,3 +295,17 @@ U2F 适用于 Web 应用程序。它通过使用网站的 URL 查找存储的身
 - 允许在密码中使用任何可打印的字符。
 - 允许用户粘贴到用户名和密码字段中。
 - 允许用户通过按一次 `Tab` 键在用户名和密码字段之间导航。
+
+
+[交易授权备忘录]: https://cheatsheetseries.owasp.org/cheatsheets/Transaction_Authorization_Cheat_Sheet.html
+[客户端验证 TLS 握手]: https://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake
+[差异因素]: https://cwe.mitre.org/data/definitions/204.html
+[基于时间的攻击]: https://en.wikipedia.org/wiki/Timing_attack
+[暴力攻击]: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#protect-against-automated-attacks
+[CAPTCHA]: https://en.wikipedia.org/wiki/CAPTCHA
+[错误处理备忘录]: https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html
+[凭证填充备忘录]: https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html
+[99.9% 的帐户泄露]: https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Your-Pa-word-doesn-t-matter/ba-p/731984
+[多因素身份验证备忘录]: https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html
+[选择和使用安全问题备忘录]: https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html
+[SAML安全备忘录]: https://cheatsheetseries.owasp.org/cheatsheets/SAML_Security_Cheat_Sheet.html
