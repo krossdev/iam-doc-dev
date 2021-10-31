@@ -2,7 +2,7 @@
 slug: password-storage
 title: 密码存储备忘录
 authors: krossdev
-tags: [password storage, cheat sheet]
+tags: [password, storage, cheat sheet]
 ---
 
 :::note 注意
