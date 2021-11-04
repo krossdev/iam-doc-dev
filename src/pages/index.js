@@ -12,15 +12,11 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.hero)}>
       <div className={clsx("container", styles.container)}>
         <h1 className="hero__title">{siteConfig.tagline}</h1>
-        <p className="hero__subtitle">本地帐号管理、OIDC、OAuth、SAML、OPA、身份认证提供</p>
+        <p className="hero__subtitle">面向 KrossIAM 开发人员的资料库</p>
         <div className='margin-top--xl'>
-          <Link to="/docs/intro" className="button button--lg button--secondary">
-            快速入门
-          </Link>
-          <Link to="/demo"
-            className={clsx("button button--lg button--warning margin-left--md", styles.button)}>
-            在线演示
-          </Link>
+          <Link to="/docs/intro" className="button button--lg button--secondary">文档</Link>
+          <Link to="/blog" className="button button--lg button--secondary margin-left--md">博客</Link>
+          <Link to="/demo" className="button button--lg button--info margin-left--md">演示</Link>
         </div>
       </div>
     </header>
@@ -31,10 +27,12 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
 
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="统一身份管理及访问规则编排服务器">
+    <Layout title={`${siteConfig.title}`} description="统一身份管理及访问规则编排服务器">
       <HomepageHeader />
+      <div class={clsx("alert alert--warning", styles.warning)} role="alert">
+        本站点主要面向 KrossIAM 的开发人员，包含大量与使用 KrossIAM 无直接关系的信息，
+        KrossIAM 用户请移步至 <Link to='https://iam.kross.work'>KrossIAM 文档站</Link>
+      </div>
       <main className={styles.main}>
         <div className="row">
           <div className="col col--7">

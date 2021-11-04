@@ -1,9 +1,10 @@
 ---
 slug: threat-modeling
-title: 威胁建模
-authors: krossdev
-tags: [threat modeling, cheat sheet]
+sidebar_label: 威胁建模
+sidebar_position: 5
 ---
+
+# 威胁建模备忘录
 
 :::note 注意
 这是一篇译文，仅供参考，原文地址：

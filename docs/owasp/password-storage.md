@@ -1,9 +1,10 @@
 ---
 slug: password-storage
-title: 密码存储备忘录
-authors: krossdev
-tags: [password, storage, cheat sheet]
+sidebar_label: 密码存储
+sidebar_position: 2
 ---
+
+# 密码存储备忘录
 
 :::note 注意
 这是一篇译文，仅供参考，原文地址：
@@ -14,8 +15,6 @@ https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
 
 即使应用程序或数据库遭泄漏也要防止攻击者获取密码，这是基本需求。
 大多数现代语言和框架都提供内置功能来帮助安全存储密码。
-
-<!-- truncate -->
 
 在攻击者获得存储的密码哈希后，他们总是能够离线暴力破解哈希。作为防御者，
 只能通过选择尽可能占用资源的哈希算法来减缓离线攻击。

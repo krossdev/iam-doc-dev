@@ -11,10 +11,6 @@
   background: linear-gradient(to left, #7928CA, #FF0080);
 }
 
-.button {
-  color: #FF0080;
-}
-
 .container {
   color: white;
 }
@@ -30,4 +26,9 @@
   .main {
     padding: 2rem;
   }
+}
+
+.warning {
+  border-radius: 0;
+  text-align: center;
 }

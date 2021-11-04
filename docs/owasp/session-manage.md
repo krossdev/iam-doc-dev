@@ -1,9 +1,10 @@
 ---
 slug: session-manage
-title: 会话管理备忘录
-authors: krossdev
-tags: [session manage, cheat sheet]
+sidebar_label: 会话管理
+sidebar_position: 6
 ---
+
+# 会话管理备忘录
 
 :::note 注意
 这是一篇译文，仅供参考，原文地址：

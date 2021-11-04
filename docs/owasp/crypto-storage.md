@@ -1,9 +1,10 @@
 ---
 slug: crypto-storage
-title: 加密存储备忘录
-authors: krossdev
-tags: [cryptographic, storage, cheat sheet]
+sidebar_label: 加密存储
+sidebar_position: 3
 ---
+
+# 加密存储备忘录
 
 :::note 注意
 这是一篇译文，仅供参考，原文地址：
@@ -16,8 +17,6 @@ https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet
 
 密码不要使用可逆的加密存储 - 应使用安全密码散列算法。[密码存储备忘录](/blog/password-storage)
 包含存储密码进一步的指导。
-
-<!-- truncate -->
 
 ## 体系设计
 
@@ -114,7 +113,7 @@ https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet
 | Python      | `random()`                                        | [secrets()]                                                                               |
 | Ruby        | `Random`                                          | [SecureRandom]                                                                            |
 | Go          | `rand` 使用 math/rand 包                          | [crypto.rand]包                                                                           |
-| Rust        | `rand::prng::XorShiftRng`                         | [rand::prng::chacha::ChaChaRng] 和其余的 Rust 库 [CSPRNG]。                               |
+| Rust        | `rand::prng::XorShiftRng`                         | [rand::prng::chacha::ChaChaRng] 和其它 Rust 库 [CSPRNG]。                               |
 
 #### UUID 和 GUID
 

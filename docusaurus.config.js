@@ -53,7 +53,7 @@ const config = {
       content: 'If you like KrossIAM, give it a star ⭐ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/krossdev/iam">GitHub</a>!',
     },
     navbar: {
-      title: 'KrossIAM',
+      title: 'KrossIAM <开发 />',
       logo: {
         alt: 'KrossIAM Logo',
         src: 'img/logo.png',
@@ -63,7 +63,7 @@ const config = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: '指南',
+          label: '文档',
         },
         { to: '/blog', label: '博客', position: 'left' },
         { to: '/demo', label: '演示', position: 'left' },
@@ -86,8 +86,8 @@ const config = {
           title: '文档',
           items: [
             {
-              label: '指南',
-              to: '/docs/intro',
+              label: '用户手册',
+              to: 'https://iam.kross.work',
             },
           ],
         },
@@ -95,8 +95,8 @@ const config = {
           title: '社区',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/krossiam',
+              label: 'Slack 聊天室',
+              href: '#',
             },
           ],
         },
