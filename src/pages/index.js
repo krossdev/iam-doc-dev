@@ -10,13 +10,14 @@ function HomepageHeader() {
 
   return (
     <header className={clsx('hero hero--primary', styles.hero)}>
-      <div className={clsx("container", styles.container)}>
+      <div className="container" style={{ color: 'white' }}>
         <h1 className="hero__title">{siteConfig.tagline}</h1>
         <p className="hero__subtitle">面向 KrossIAM 开发人员的资料库</p>
-        <div className='margin-top--xl'>
+        <div className='margin-top--xl margin-bottom--lg'>
           <Link to="/docs/intro" className="button button--lg button--secondary">文档</Link>
           <Link to="/blog" className="button button--lg button--secondary margin-left--md">博客</Link>
-          <Link to="/demo" className="button button--lg button--info margin-left--md">演示</Link>
+          <Link to="/demo" className="button button--lg button--info margin-left--md"
+            style={{color:'black'}}>演示</Link>
         </div>
       </div>
     </header>
@@ -29,7 +30,8 @@ export default function Home() {
   return (
     <Layout title={`${siteConfig.title}`} description="统一身份管理及访问规则编排服务器">
       <HomepageHeader />
-      <div class={clsx("alert alert--warning", styles.warning)} role="alert">
+      <div class="alert alert--info" role="alert"
+        style={{ borderRadius: 0, textAlign: 'center' }}>
         本站点主要面向 KrossIAM 的开发人员，包含大量与使用 KrossIAM 无直接关系的信息，
         KrossIAM 用户请移步至 <Link to='https://iam.kross.work'>KrossIAM 文档站</Link>
       </div>
@@ -53,17 +55,21 @@ export default function Home() {
           </div>
           <div className="col col--5">
             <h3>文章</h3>
+            <ul>
+              <li>
+                <Link to='/blog/password-hashing'>KrossIAM 中的密码哈希</Link>
+              </li>
+              <li>
+                <Link to='/blog/kiam-datastore'>KrossIAM 后台数据存储</Link>
+              </li>
+            </ul>
             <h3>资源</h3>
             <ul>
               <li>
-                <Link href='/' target='_blank'>
-                  源代码仓库
-                </Link>
+                <Link to='https://github.com/krossdev/iam'>代码仓库</Link>
               </li>
               <li>
-                <Link href='/' target='_blank'>
-                  Slack 聊天室
-                </Link>
+                <Link to='/'>Slack 聊天室</Link>
               </li>
             </ul>
           </div>
