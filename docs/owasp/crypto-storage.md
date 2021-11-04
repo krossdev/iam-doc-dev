@@ -15,7 +15,7 @@ https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet
 
 本文提供了一个在实施保护静态数据的解决方案时要遵循的简单模型。
 
-密码不要使用可逆的加密存储 - 应使用安全密码散列算法。[密码存储备忘录](/blog/password-storage)
+密码不要使用可逆的加密存储 - 应使用安全密码散列算法。[密码存储备忘录](/docs/owasp/password-storage)
 包含存储密码进一步的指导。
 
 ## 体系设计
