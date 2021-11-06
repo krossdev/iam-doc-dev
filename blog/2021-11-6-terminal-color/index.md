@@ -1,6 +1,6 @@
 ---
 slug: terminal-color
-title: 开发时终端输出颜色说明
+title: 开发时终端日志颜色高亮
 authors: krossdev
 tags: [kross iam, terminal, color]
 ---
@@ -29,3 +29,8 @@ tags: [kross iam, terminal, color]
 ## 禁用颜色
 
 可以通过设置环境变量 `NO_COLOR=true` 来禁止使用颜色。
+
+## 调整颜色
+
+可以修改 `dump.go` 文件代码来调整颜色，这个文件使用 `github.com/fatih/color` 模块。
+dump.go 输出 4 个信息：HTTP 请求头/请求体、响应头/响应体。
