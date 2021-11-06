@@ -80,3 +80,54 @@ KrossIAM 目前没有提供任何数据备份方面的支持，但是有很多�
 
 * 数据库中时间存储统一采用 UTC 时间，在配置数据库的时候需要注意调整时区，不要使用本地的时区。
 * 如果在代码中与数据库交互（存入或取出），需要进行必要的时间转换，否则将不正确。
+
+### MySQL 驱动
+
+[MySQL 驱动文档](https://github.com/go-sql-driver/mysq)
+
+基本格式：
+
+```
+[username[:password]@][protocol[(address)]]/dbname[?param1=value1&...&paramN=valueN]
+```
+
+MySQL 驱动可以指定参数，KrossIAM 使用下面几个参数：
+
+#### clientFoundRows=true
+
+> `clientFoundRows=true` causes an UPDATE to return the number of **matching rows**
+> instead of the number of rows changed.
+
+KrossIAM 在更新数据后，为了确保符合预期，会检查更新的行数，例如更新某个用户的密码，在执行完
+`update` 操作后，会检查是否准确的更新了 1 行，不多也不少。如果不指定这个参数，
+那么在数据没有改变的情况下（例如新旧密码相同）会返回 0 而不是 1，这将导致后续的检查失败，
+认为查询条件不正确。
+
+#### parseTime
+
+> `parseTime=true` changes the output type of `DATE` and `DATETIME` values to
+> `time.Time` instead of `[]byte / string`.
+> The date or datetime like `0000-00-00 00:00:00` is converted into zero value of
+> `time.Time`.
+
+这个方便语言之间的交流。
+
+### PostgreSQL 驱动
+
+[PostgreSQL 驱动文档](https://github.com/jackc/pgx)
+
+### Sqlite 驱动
+
+[Sqlite3 驱动文档](https://github.com/mattn/go-sqlite3)
+
+#### mode=rw
+
+> 模式参数可以设置为“ro”、“rw”、“rwc”或“memory”。 尝试将其设置为任何其他值是错误的。
+> 如果指定了“ro”，那么数据库将以只读访问打开。 如果模式选项设置为“rw”，则以读写模式打开数据库
+> （但不能创建）访问，就像设置了 SQLITE_OPEN_READWRITE（但没有 SQLITE_OPEN_CREATE）一样。
+> 值“rwc”等效于设置 SQLITE_OPEN_READWRITE 和 SQLITE_OPEN_CREATE。
+> 如果模式选项设置为“memory”，则使用无磁盘读写的纯内存数据库。
+
+### CockroachDB 驱动
+
+CockroachDB 使用 PostgreSQL 驱动。
