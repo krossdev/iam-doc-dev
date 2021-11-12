@@ -11,7 +11,7 @@ KrossIAM 采用 SQL 数据库存储帐号信息，当前支持 `PostgreSQL`，`M
 `Sqlite` 数据库。
 
 对于只想体验一下 KrossIAM 的用户，使用 `Sqlite` 存储是个不错的选择，当然也可以在正式环境中采用
-`Sqlite` 存储，但通常不建议这么做，尤其在并发比较大的情况下。
+`Sqlite` 存储，但通常不建议这么做，因为它有一些限制，例如最多只能够附属 10 个数据库 schema。
 
 <!--truncate-->
 
@@ -127,6 +127,15 @@ KrossIAM 在更新数据后，为了确保符合预期，会检查更新的行�
 > （但不能创建）访问，就像设置了 SQLITE_OPEN_READWRITE（但没有 SQLITE_OPEN_CREATE）一样。
 > 值“rwc”等效于设置 SQLITE_OPEN_READWRITE 和 SQLITE_OPEN_CREATE。
 > 如果模式选项设置为“memory”，则使用无磁盘读写的纯内存数据库。
+
+#### Sqlite 数据库限制
+
+下面这个页面进行了总结，这里不再赘述：
+
+https://stackoverflow.com/questions/9845448/attach-limit-10
+
+对于 KrossIAM 的意思就是，使用 Sqlite 最多只能创建 10 个项目，就算修改 sqlite 的源代码，
+顶到天也只能创建 62 个项目。
 
 ### CockroachDB 驱动
 
