@@ -59,12 +59,7 @@ const config = {
         src: 'img/logo.png',
       },
       items: [
-        {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: '文档',
-        },
+        { type: 'doc', docId: 'quickstart', label: '文档', position: 'left', },
         { to: '/blog', label: '博客', position: 'left' },
         { to: '/demo', label: '演示', position: 'left' },
         {

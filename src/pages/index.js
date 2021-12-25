@@ -14,7 +14,7 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.tagline}</h1>
         <p className="hero__subtitle">面向 KrossIAM 开发人员的资料库</p>
         <div className='margin-top--xl margin-bottom--lg'>
-          <Link to="/docs/intro" className="button button--lg button--secondary">文档</Link>
+          <Link to="/docs/quickstart" className="button button--lg button--secondary">文档</Link>
           <Link to="/blog" className="button button--lg button--secondary margin-left--md">博客</Link>
           <Link to="/demo" className="button button--lg button--info margin-left--md"
             style={{color:'black'}}>演示</Link>
@@ -79,7 +79,7 @@ export default function Home() {
             <h3>文档</h3>
             <ul>
               <li>
-                <Link to='/docs/intro'>快速上手</Link>
+                <Link to='/docs/quickstart'>快速上手</Link>
               </li>
             </ul>
             <h3>博客</h3>
