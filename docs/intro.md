@@ -18,7 +18,7 @@ KrossIAM 很简单，花上几分钟即可启动，过程中需要下载一些�
 
 我们需要一个管理台账号登录后台管理系统，系统默认没有账号，需要创建一个，在终端中运行：
 
-```shell
+```shell title='创建管理后台账号'
 kiam -c config.yaml -adduser
 ```
 
@@ -29,7 +29,7 @@ kiam -c config.yaml -adduser
 
 运行下面的命令启动 KrossIAM：
 
-```shell
+```shell title='启动 KrossIAM'
 kiam -c config.yaml
 ```
 

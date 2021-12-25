@@ -46,7 +46,7 @@ export default function Home() {
               OAuth2 身份提供，SAML 单点登录，等等...
               &nbsp;
               <Link to='#'>
-                看看我可以使用 KrossIAM 做些什么？
+                看看可以使用 KrossIAM 做些什么？
               </Link>
             </p>
             <p>
