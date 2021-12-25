@@ -51,9 +51,9 @@ export default function Home() {
             </p>
             <p>
               KrossIAM 内置灵活的授权子系统，可以应对各种不同的授权场景，
-              与任何经常见到的，例如基于角色的访问控制系统（RBAC），基于属性的访问授权系统（ABAC），
-              或基于任何 X 的访问控制系统不太一样，
-              KrossIAM 的授权子系统基于可编程的规则语言，这让事情变得复杂，但是却足够灵活及强大。
+              与常见的（例如基于角色的访问控制系统（RBAC），基于属性的访问授权系统（ABAC），等）
+              不太一样，KrossIAM 的授权子系统基于可编程的规则语言，这让事情变得些微复杂，
+              但是却足够灵活及强大。
               &nbsp;
               <Link to='#'>
                 看看如何使用 KrossIAM 授权编排系统实现常见的访问控制模式？
@@ -76,8 +76,20 @@ export default function Home() {
             </ul>
           </div>
           <div className="col col--5">
-            <h3>文章</h3>
+            <h3>文档</h3>
             <ul>
+              <li>
+                <Link to='/docs/intro'>快速上手</Link>
+              </li>
+            </ul>
+            <h3>博客</h3>
+            <ul>
+              <li>
+                <Link to='/blog/email'>KrossIAM 邮件发送模块</Link>
+              </li>
+              <li>
+                <Link to='/blog/ms'>KrossIAM 中的消息服务</Link>
+              </li>
               <li>
                 <Link to='/blog/password-hashing'>KrossIAM 中的密码哈希</Link>
               </li>

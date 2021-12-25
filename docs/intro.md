@@ -2,34 +2,42 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 快速上手
 
-Let's discover **Docusaurus in less than 5 minutes**.
+KrossIAM 很简单，花上几分钟即可启动，过程中需要下载一些文件，如果网络不太顺畅，
+可能需要占用一些时间。
 
-## Getting Started
+## 安装
 
-Get started by **creating a new site**.
+### 配置文件
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+启动 `KrossIAM` 需要一个配置文件，在安装时默认提供了一个，文件名为 `config.yaml`，
+可以直接使用，现在我们先不关心它的内容，直接使用它。
 
-## Generate a new site
+### 创建管理台账号
 
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
-```
-
-## Start your site
-
-Run the development server:
+我们需要一个管理台账号登录后台管理系统，系统默认没有账号，需要创建一个，在终端中运行：
 
 ```shell
-cd my-website
-
-npx docusaurus start
+kiam -c config.yaml -adduser
 ```
 
-Your site starts at `http://localhost:3000`.
+这是一个交互式命令，按照提示录入信息后，成功的话系统会生成一个随机密码打印在终端上，
+**将密码复制保存，后面登录需要使用**。
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+## 启动
+
+运行下面的命令启动 KrossIAM：
+
+```shell
+kiam -c config.yaml
+```
+
+打开浏览器，在地址栏中输入 `http://localhost:18080`，使用前面录入的管理台账号信息登录。
+
+## 接下来
+
+现在你已经熟练掌握了 KrossIAM 的使用技巧，接下来，你需要更进一步了解：
+
+* 配置 KrossIAM，根据你的需要定义 KrossIAM 的行为。
+* 了解如何将 KrossIAM 与你的业务系统集成，这可能是你使用 KrossIAM 的终极目的。
