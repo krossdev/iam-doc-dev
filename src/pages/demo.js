@@ -11,11 +11,11 @@ const items = [
     title: 'KrossIAM 代理',
     desc: '了解如何使用 KrossIAM 代理为系统添加身份管理。',
     secondaryDesc: '你需要一些`高级`软件的使用和配置经验，例如 git, 命令行等技能。',
-    href: '#',
+    href: 'demo-proxy',
   }, {
     title: 'KrossIAM API 开发',
-    desc: '了解如何在项目中通过 KrossIAM API 集成身份和授权管理。',
-    secondaryDesc: '你需要掌握 ExpressJS 的基本开发技能，以及一些 OpenAPI 相关的知识。',
+    desc: '了解如何在项目中通过 KrossIAM API 集成身份管理。',
+    secondaryDesc: '你需要掌握 NodeJS 的基本开发技能，以及一些 OpenAPI 相关的知识。',
     href: '#',
   }, {
     title: 'KrossIAM for React',
