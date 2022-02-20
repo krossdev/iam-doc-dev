@@ -1,0 +1,6 @@
+@host = http://localhost:8080
+
+## q
+http://localhost:8080/product?query={product(id:1){name,info,price}}
+
+## post
