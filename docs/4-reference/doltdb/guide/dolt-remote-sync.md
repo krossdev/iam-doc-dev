@@ -33,6 +33,8 @@ dolt remote add origin http://localhost:50051/test-org/test-repo
 dolt remote add origin http://localhost:50051/wk/p2018
 dolt push origin main
 dolt pull origin
+
+dolt clone http://localhost:50051/wk/p2018 
 ```
 
 其中: 1234 端口不是同步端口, RPC 才是
